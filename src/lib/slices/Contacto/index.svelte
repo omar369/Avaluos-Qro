@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Content } from '@prismicio/client';
-	import {createForm} from "svelte-forms-lib"
+	// import {createForm} from "svelte-forms-lib"
 
 	export let slice: Content.ContactoSlice;
 
