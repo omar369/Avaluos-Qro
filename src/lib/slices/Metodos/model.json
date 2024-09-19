@@ -1,0 +1,49 @@
+{
+  "id": "metodos",
+  "type": "SharedSlice",
+  "name": "Metodos",
+  "description": "Metodos",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "item": {
+          "type": "Group",
+          "config": {
+            "label": "Item",
+            "repeat": true,
+            "fields": {
+              "metodo_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Metodo Name",
+                  "placeholder": ""
+                }
+              },
+              "metodo_color": {
+                "type": "Color",
+                "config": {
+                  "label": "Metodo Color",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

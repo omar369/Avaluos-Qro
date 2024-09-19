@@ -1,0 +1,40 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "practice",
+				"type": "Text"
+			},
+			"item": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"metodo_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "seen",
+									"type": "Text"
+								}
+							],
+							[
+								"metodo_color",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "#98ad6f",
+									"type": "Color"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
