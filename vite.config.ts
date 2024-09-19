@@ -15,5 +15,10 @@ export default defineConfig({
 			// Allow access to files from the project root.
 			allow: ['..']
 		}
+	},
+	build: {
+		rollupOptions: {
+			external: ['svelte-forms-lib']
+		}
 	}
 });
