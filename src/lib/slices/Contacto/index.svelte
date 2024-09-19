@@ -4,22 +4,22 @@
 
 	export let slice: Content.ContactoSlice;
 
-	const { form, handleChange, handleSubmit } = createForm({
-		initialValues: {
-			title: "",
-			name: "",
-			email: ""
-		},
-		onSubmit: (values: any) => {
-			alert(JSON.stringify(values));
-		}
-	});
+	// const { form, handleChange, handleSubmit } = createForm({
+	// 	initialValues: {
+	// 		title: "",
+	// 		name: "",
+	// 		email: ""
+	// 	},
+	// 	onSubmit: (values: any) => {
+	// 		alert(JSON.stringify(values));
+	// 	}
+	// });
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 	Placeholder component for {slice.slice_type} (variation: {slice.variation}) Slices
 
-	<form on:submit={handleSubmit}>
+	<!-- <form on:submit={handleSubmit}>
 		<label for="title">title</label>
 		<select
 		  id="title"
@@ -49,7 +49,7 @@
 		/>
 	
 		<button type="submit">Submit</button>
-	  </form>
+	  </form> -->
 </section>
 
 
