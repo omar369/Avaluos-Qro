@@ -20,5 +20,8 @@ export default defineConfig({
 		rollupOptions: {
 			external: ['svelte-forms-lib']
 		}
+	},
+	optimizeDeps: {
+		include: ['svelte-forms-lib']
 	}
 });
