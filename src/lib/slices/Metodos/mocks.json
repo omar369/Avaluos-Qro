@@ -33,6 +33,62 @@
 						]
 					}
 				]
+			},
+			"metodos": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "circle",
+									"type": "Text"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Sint pariatur id magna elit duis velit et est. Adipisicing ad dolore Lorem officia sunt labore consequat. Officia sit deserunt amet consectetur nulla commodo cupidatat."
+											}
+										}
+									]
+								}
+							],
+							[
+								"background",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+										"width": 3500,
+										"height": 2338
+									},
+									"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+									"width": 3500,
+									"height": 2338,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": []

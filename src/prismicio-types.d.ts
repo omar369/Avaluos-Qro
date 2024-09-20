@@ -328,6 +328,56 @@ export interface ContactoSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	details: prismic.RichTextField;
+
+	/**
+	 * Contact Image field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.contact_image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	contact_image: prismic.ImageField<never>;
+
+	/**
+	 * Name field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
+	 * Email field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.email
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	email: prismic.KeyTextField;
+
+	/**
+	 * Subject field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.subject
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	subject: prismic.KeyTextField;
+
+	/**
+	 * Message field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.message
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	message: prismic.KeyTextField;
 }
 
 /**
@@ -445,6 +495,41 @@ export interface MetodosSliceDefaultPrimaryItemItem {
 }
 
 /**
+ * Item in *Metodos → Default → Primary → Metodos*
+ */
+export interface MetodosSliceDefaultPrimaryMetodosItem {
+	/**
+	 * Name field in *Metodos → Default → Primary → Metodos*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: metodos.default.primary.metodos[].name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
+	 * Description field in *Metodos → Default → Primary → Metodos*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: metodos.default.primary.metodos[].description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Background field in *Metodos → Default → Primary → Metodos*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: metodos.default.primary.metodos[].background
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	background: prismic.ImageField<never>;
+}
+
+/**
  * Primary content in *Metodos → Default → Primary*
  */
 export interface MetodosSliceDefaultPrimary {
@@ -467,6 +552,16 @@ export interface MetodosSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#group
 	 */
 	item: prismic.GroupField<Simplify<MetodosSliceDefaultPrimaryItemItem>>;
+
+	/**
+	 * Metodos field in *Metodos → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: metodos.default.primary.metodos[]
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	metodos: prismic.GroupField<Simplify<MetodosSliceDefaultPrimaryMetodosItem>>;
 }
 
 /**
@@ -527,6 +622,7 @@ declare module '@prismicio/client' {
 			HeroSliceDefault,
 			MetodosSlice,
 			MetodosSliceDefaultPrimaryItemItem,
+			MetodosSliceDefaultPrimaryMetodosItem,
 			MetodosSliceDefaultPrimary,
 			MetodosSliceVariation,
 			MetodosSliceDefault
