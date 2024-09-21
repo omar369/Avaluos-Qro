@@ -18,12 +18,12 @@
 			</div>
 			<div class="col-start-1 md:row-start-1">
 				<h1
-					class="mb-2 md:mb-8 text-[clamp(3rem,15vmin,18rem)] font-bold leading-none tracking-tighter text-nowrap"
+					class="mb-5 md:mb-8 text-[clamp(3rem,15vmin,18rem)] font-bold leading-none tracking-tighter text-nowrap"
 				>
 					<span class="block text-blue-700">{slice.primary.title}</span>
 				</h1>
 				<h3
-					class="mb-2 md:mb-8 text-[clamp(2rem,12vmin,15rem)] font-bold leading-none tracking-tighter text-nowrap"
+					class="mb-5 md:mb-8 text-[clamp(2rem,12vmin,15rem)] font-bold leading-none tracking-tighter text-nowrap"
 				>
 					<span class="block text-blue-700 -mt-[.6em]">{slice.primary.subtitle}</span>
 				</h3>

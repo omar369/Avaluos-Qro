@@ -53,7 +53,7 @@
 	});
 </script>
 
-<Threlte.Group position={position.map((p) => p * 2)}>
+<Threlte.Group position={position.map((p) => p * 2.1)}>
 	<Float
 		speed={3 * rate}
 		rotationSpeed={3 * rate}

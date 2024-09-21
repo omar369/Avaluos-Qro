@@ -3,6 +3,9 @@
 	import * as THREE from 'three';
 	import Geometry from './Geometry.svelte';
 	import { ContactShadows, Environment, interactivity, transitions } from '@threlte/extras';
+	import Casa from './Casa.svelte';
+	import Lupa from './Lupa.svelte';
+	import Money from './Money.svelte';
 	// THREE.
 	interactivity();
 	transitions();
@@ -20,8 +23,9 @@
 <ContactShadows position={[0, -3.5, 0]} opacity={0.65} scale={40} blur={1} far={9} />
 
 <!-- elemento central -->
-<Geometry position={[0, 0, 0]} rate={0.3} geometry={new THREE.IcosahedronGeometry(3)} />
+<Casa />
 <!-- elemento 2 -->
-<Geometry position={[1, -0.75, 4]} rate={0.4} geometry={new THREE.BoxGeometry(0.5, 1.6, 2, 16)} />
+<Lupa />
 <!-- elemento 3 -->
-<Geometry position={[-1.4, 2, -4]} rate={0.6} geometry={new THREE.DodecahedronGeometry(1.5)} />
+<Money />
+<!-- <Geometry position={[-1.4, 2, -4]} rate={0.6} geometry={new THREE.DodecahedronGeometry(1.5)} /> -->
