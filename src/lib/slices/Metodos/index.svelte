@@ -1,19 +1,40 @@
 <script lang="ts">
+	// Exportaciones originales
 	import { onMount } from 'svelte';
 	import Bounded from '$lib/components/Bounded.svelte';
 	import Heading from '$lib/components/Heading.svelte';
 
 	import type { Content, ImageField } from '@prismicio/client'; // Importación de ImageField
 	import { PrismicImage } from '@prismicio/svelte'; // Importación de PrismicImage para manejar las imágenes correctamente
+	import {  PrismicRichText } from '@prismicio/svelte';
 	import IconCircle from '~icons/codicon/circle-large-filled';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 	gsap.registerPlugin(ScrollTrigger);
 
+	// Declaración de las props que recibe el componente
 	export let slice: Content.MetodosSlice;
 
 	let component: HTMLElement;
+	let infoVisible: boolean[] = []; // Para controlar el estado de cada animación individualmente
+
+	// Función que maneja el click y anima el div de clase "info" y el <Heading> correspondiente
+	function handleClick(index: number) {
+		const infoTarget = document.querySelector(`.info-${index}`);
+		const headingTarget = document.querySelector(`.heading-${index}`);
+		
+		if (infoVisible[index]) {
+			// Si ya está visible, animamos de vuelta a su posición original
+			gsap.to(infoTarget, { y: 0, duration: 0.5, ease: 'power2.inOut' });
+			gsap.to(headingTarget, { y: 0, duration: 0.5, delay: 0.1, ease: 'power1.inOut' });
+		} else {
+			// Si no está visible, animamos hacia arriba la info y el heading
+			gsap.to(infoTarget, { y: -400, duration: 0.5, ease: 'power2.inOut' });
+			gsap.to(headingTarget, { y: -200, duration: 0.5, ease: 'power2.inOut' });
+		}
+		infoVisible[index] = !infoVisible[index]; // Alternamos el estado
+	}
 
 	// Animación al montar el componente
 	onMount(() => {
@@ -45,6 +66,9 @@
 				ease: 'power1.inOut',
 			}
 		);
+
+		// Inicializar la posición del div .info
+		gsap.set('.info', { y: 0 });
 	});
 </script>
 
@@ -71,18 +95,25 @@
 
 
 	<!-- Iteración sobre los métodos con la tarjeta y el componente PrismicImage -->
-	 <Bounded>
+	<Bounded>
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-			{#each slice.primary.metodos as { name, description, background }}
-				<div class="card relative m-5" aria-label={name || undefined}>
-					<!-- Uso de PrismicImage para cargar la imagen -->
+			{#each slice.primary.metodos as { name, description, background }, index}
+			<button on:click={() => handleClick(index)} class="text-slate-700 py-2 px-4 rounded mt-4">
+				<div class="card relative m-5 overflow-hidden rounded-lg" aria-label={name || undefined}>
+					<!-- Imagen de fondo -->
 					<PrismicImage field={background} class="absolute inset-0 object-cover w-full h-full rounded-lg opacity-50" />
-
-					<!-- El título centrado -->
-					<Heading size="md" class="absolute inset-0 flex text-center items-center justify-center text-slate-500 hover:text-blue-700 z-10">
+	
+					<!-- El título centrado con clase dinámica única -->
+					<Heading size="md" class={`heading-${index} absolute inset-0 flex text-center items-center justify-center text-slate-500 hover:text-blue-700 z-10`}>
 						{name}
 					</Heading>
+	
+					<!-- Div de info con el efecto esmerilado, con clase única por índice -->
+					<div class={`info info-${index} absolute bottom-[-420px] left-0 w-full h-[420px] bg-white/30 backdrop-blur-lg z-20`}>
+						<PrismicRichText field={description}/>
+					</div>
 				</div>
+			</button>
 			{/each}
 		</div>
 	</Bounded>
@@ -92,14 +123,13 @@
 	.card {
 		height: 500px; /* Altura de la tarjeta */
 		border-radius: 10px; /* Esquinas redondeadas */
-		border: 3px solid #ffffff; /* Borde azul inicial */
+		border: 3px solid #ffffff; /* Borde blanco */
 		transition: all 0.3s ease-in-out;
 		position: relative; /* Necesario para el posicionamiento del contenido dentro */
 		overflow: hidden; /* Asegura que los elementos no sobresalgan */
 	}
 
 	.card:hover {
-		border-color: #1e4ed8; /* Cambia el borde a naranja en hover */
-		
+		border-color: #1e4ed8; /* Cambia el borde a azul en hover */
 	}
 </style>
