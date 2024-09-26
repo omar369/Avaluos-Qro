@@ -96,6 +96,10 @@
 
 	<!-- Iteración sobre los métodos con la tarjeta y el componente PrismicImage -->
 	<Bounded>
+		<!-- Titulo de los métodos de valuación -->
+		<Heading size="xl" class=" relative flex justify-center">
+			{slice.primary.heading}
+		</Heading>
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 			{#each slice.primary.metodos as { name, description, background }, index}
 			<button on:click={() => handleClick(index)} class="text-slate-700 py-2 px-4 rounded mt-4">
@@ -109,7 +113,7 @@
 					</Heading>
 	
 					<!-- Div de info con el efecto esmerilado, con clase única por índice -->
-					<div class={`info info-${index} absolute bottom-[-420px] left-0 w-full h-[420px] bg-white/30 backdrop-blur-lg z-20`}>
+					<div class={`info info-${index} absolute bottom-[-420px] left-0 w-full h-[420px] bg-white/30 backdrop-blur-lg z-20 p-10 text-xl`}>
 						<PrismicRichText field={description}/>
 					</div>
 				</div>

@@ -8,7 +8,7 @@
   import * as THREE from 'three';
 
   export let rate = 0.5;
-  const position: [number, number, number] = [-2, 3, -2];
+  const position: [number, number, number] = [-2, 5, -2];
 
   const soundFx = new Audio('/sounds/turn.ogg');
   let visible = false;
@@ -49,7 +49,7 @@
       },
       easing: elasticOut,
       duration: gsap.utils.random(800, 1200),
-      delay: gsap.utils.random(0, 500)
+      delay: gsap.utils.random(2000, 2300)
     };
   });
 </script>
