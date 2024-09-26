@@ -3,6 +3,6 @@
 	import Shape from './Shape.svelte';
 </script>
 
-<Canvas shadows>
+<Canvas shadows >
 	<Shape />
 </Canvas>

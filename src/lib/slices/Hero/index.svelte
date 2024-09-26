@@ -69,31 +69,31 @@
 		<div class="grid min-h-[65vh] grid-cols-1 items-center md:grid-cols-2">
 			<!-- CASA 3D -->
 			<div
-				class="relative z-10 row-span-1 row-start-1 -my-10 aspect-[1/1.3] overflow-hidden md:col-span-1 md:col-start-2 md:mt-0 transform -translate-y-[0px]"
+				class="relative row-span-1 row-start-1 -my-10 aspect-[1/1.3] overflow-hidden md:col-span-1 md:col-start-2 md:mt-0 transform -translate-y-[0px]"
 			>
 				<Scene />
 			</div>
 
 			<!-- TÍTULO ANIMADO AVALUOS -->
-			<div class="col-start-1 md:row-start-1  transform -translate-y-[250px]">
+			<div class="col-start-1 md:row-start-1  transform -translate-y-[250px] overflow-hidden">
 				<!-- ANIMACIÓN DE STROKE CASA LOGO -->
 				<svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="-20 10 300 300" width="800" height="800">
 
 					<path d="m 6.0092698,284.19878 c -9.9563529,-0.20422 -13.4576347,-0.48124 -14.7899117,-1.17019 -4.2355301,-2.19028 -9.0394681,-8.55773 -9.8914101,-13.11071 -0.476078,-2.54428 -0.45849,-48.35845 0.01954,-50.88259 0.474547,-2.50578 1.299131,-4.22066 3.140845,-6.532 7.3536341,-9.22876 37.569419,-39.19605 42.290734,-41.94293 1.800162,-1.04734 4.179586,-1.51238 7.178998,-1.40307 5.345914,0.19482 6.80756,1.365 27.613711,22.10725 21.166915,21.10191 22.903463,23.04623 22.868247,25.60438 -0.03569,2.59211 -2.340555,5.42396 -4.414618,5.42396 -2.507523,0 -4.787149,-1.99787 -24.009879,-21.04228 -19.581908,-19.40026 -21.760961,-21.35003 -23.37798,-20.91815 -2.59873,0.69408 -37.5203148,35.71214 -39.3188994,39.42751 -0.9467265,1.95568 -0.5841575,49.26356 0.3933455,51.32349 1.3703696,2.88784 -1.496423,2.81366 118.6597779,3.07023 96.90879,0.20693 107.17908,0.30305 109.03793,1.02044 2.16806,0.83674 3.03504,4.12435 1.75634,6.66009 -0.79743,1.58137 -1.39986,1.80912 -5.67539,2.14568 -4.30405,0.33879 -195.964003,0.53717 -211.4813802,0.21889 z" fill="none" stroke="none" stroke-width="1"/>
 				</svg>
-				<div class="transform -translate-y-[240px] translate-x-[20px]">
+				<div class="transform -translate-y-[220px] translate-x-[20px]">
 					<h1
-						id="avaluos" class="opacity-0 transform -translate-y-[30px] pl-10 mb-5 md:mb-8 text-[clamp(12rem,15vmin,18rem)] font-bold leading-none tracking-tighter text-nowrap"
+						id="avaluos" class="opacity-0 transform -translate-y-[30px] pl-10 mb-5 md:mb-8 text-[clamp(3rem,18vmin,18rem)] font-bold leading-none tracking-tighter text-nowrap"
 					>
 						<span class="block text-blue-700">{slice.primary.title}</span>
 					</h1>
 					<h3
-					id="inmob" class="opacity-0 ml-4 mb-5 md:mb-8 text-[clamp(1rem,12vmin,15rem)] font-bold leading-none tracking-tighter text-nowrap transform -translate-y-[0px]"
+					id="inmob" class="opacity-0 ml-4 mb-5 md:mb-8 text-[clamp(1rem,10vmin,15rem)] font-bold leading-none tracking-tighter text-nowrap transform -translate-y-[0px]"
 					>
 						<span class="block text-blue-700 -mt-[.6em]">{slice.primary.subtitle}</span>
 					</h3>
 					<span
-					id="city" class="opacity-0 ml-8 job-title block bg-gradient-to-tr -mt-[.9em] from-gray-800 via-gray-600 to-gray-400 bg-clip-text text-transparent text-4xl font-bold uppercase tracking-[.2em] md:text-4xl opacity-0.5 transform -translate-y-[0px]"
+					id="city" class="opacity-0 ml-8 block bg-gradient-to-tr -mt-[.9em] text-[clamp(1rem,10vmin,12rem)] from-gray-800 via-gray-600 to-gray-400 bg-clip-text text-transparent text-4xl font-bold uppercase tracking-[.2em] md:text-4xl opacity-0.5 transform -translate-y-[0px]"
 					>
 						{slice.primary.city}
 					</span>
