@@ -63,6 +63,14 @@
             "label": "Message",
             "placeholder": ""
           }
+        },
+        "contact_img": {
+          "type": "Image",
+          "config": {
+            "label": "Contact_Img",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}

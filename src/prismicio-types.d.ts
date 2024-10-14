@@ -378,6 +378,16 @@ export interface ContactoSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	message: prismic.KeyTextField;
+
+	/**
+	 * Contact_Img field in *Contacto → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contacto.default.primary.contact_img
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	contact_img: prismic.ImageField<never>;
 }
 
 /**
@@ -406,6 +416,128 @@ type ContactoSliceVariation = ContactoSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type ContactoSlice = prismic.SharedSlice<'contacto', ContactoSliceVariation>;
+
+/**
+ * Primary content in *Gallery → Default → Primary*
+ */
+export interface GallerySliceDefaultPrimary {
+	/**
+	 * Image 1 field in *Gallery → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery.default.primary.image_1
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image_1: prismic.ImageField<never>;
+
+	/**
+	 * Image 2 field in *Gallery → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery.default.primary.image_2
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image_2: prismic.ImageField<never>;
+
+	/**
+	 * Image 3 field in *Gallery → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery.default.primary.image_3
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image_3: prismic.ImageField<never>;
+
+	/**
+	 * Image 4 field in *Gallery → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery.default.primary.image_4
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image_4: prismic.ImageField<never>;
+
+	/**
+	 * Image 5 field in *Gallery → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery.default.primary.image_5
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image_5: prismic.ImageField<never>;
+
+	/**
+	 * Image 6 field in *Gallery → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery.default.primary.image_6
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image_6: prismic.ImageField<never>;
+
+	/**
+	 * Image 7 field in *Gallery → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery.default.primary.image_7
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image_7: prismic.ImageField<never>;
+
+	/**
+	 * Image 8 field in *Gallery → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery.default.primary.image_8
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image_8: prismic.ImageField<never>;
+
+	/**
+	 * Image 9 field in *Gallery → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery.default.primary.image_9
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image_9: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Gallery Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GallerySliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<GallerySliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *Gallery*
+ */
+type GallerySliceVariation = GallerySliceDefault;
+
+/**
+ * Gallery Shared Slice
+ *
+ * - **API ID**: `gallery`
+ * - **Description**: Gallery
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GallerySlice = prismic.SharedSlice<'gallery', GallerySliceVariation>;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -616,6 +748,10 @@ declare module '@prismicio/client' {
 			ContactoSliceDefaultPrimary,
 			ContactoSliceVariation,
 			ContactoSliceDefault,
+			GallerySlice,
+			GallerySliceDefaultPrimary,
+			GallerySliceVariation,
+			GallerySliceDefault,
 			HeroSlice,
 			HeroSliceDefaultPrimary,
 			HeroSliceVariation,

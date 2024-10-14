@@ -1,12 +1,18 @@
 <script lang="ts">
 	import Bounded from "$lib/components/Bounded.svelte";
 	import Heading from "$lib/components/Heading.svelte";
+	import WhatsBtn from "$lib/components/WhatsBtn.svelte"
+
+	import { type ImageField } from "@prismicio/client"
+    import { PrismicImage } from "@prismicio/svelte";
 
 	import type { Content } from '@prismicio/client';
 
 	import {  PrismicRichText } from '@prismicio/svelte';
 
 	export let slice: Content.ContactoSlice;
+
+	// export let contact_img: ImageField
 
 	let nombre: string = '';
 	let correo: string = '';
@@ -52,8 +58,12 @@
 			<PrismicRichText field={slice.primary.details}/>
 		</div>
 		<div class="col-start-2 prose prose-slate prose-xl">
-			Boton de Whats
+			<WhatsBtn phoneNumber="524422847646" message="Hola, estoy interesado en sus servicios" />
 		</div>
+	</div>
+
+	<div class='img-contact overflow rounded-1x opacity-1'>
+		<PrismicImage field={slice.primary.contact_img} class="h-full object-fill" imgixParams={{ q: 90}}/>
 	</div>
 
 	<form on:submit={enviarFormulario} class="space-y-4">
@@ -87,4 +97,9 @@
 
 </Bounded>
 
-
+<style>
+    .img-contact {
+        perspective: 500px;
+        perspective-origin: 150% 150%;
+    }
+</style>
