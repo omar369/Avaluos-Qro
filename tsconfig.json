@@ -12,7 +12,8 @@
 		"moduleResolution": "bundler",
 		"plugins": [{ "name": "typescript-svelte-plugin" }],
 		"types": ["unplugin-icons/types/svelte"]
-	}
+	},
+	"include": ["src/**/*", "src/types/**/*"]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	// except $lib which is handled by https://kit.svelte.dev/docs/configuration#files
 	//

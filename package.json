@@ -56,8 +56,10 @@
 		"@threlte/core": "^7.3.1",
 		"@threlte/extras": "^8.11.5",
 		"clsx": "^2.1.1",
+		"dotenv": "^16.4.7",
 		"gsap": "^3.12.5",
 		"locomotive-scroll": "^4.1.4",
+		"nodemailer": "^6.9.16",
 		"svelte-forms-lib": "^2.0.1",
 		"three": "^0.168.0"
 	}

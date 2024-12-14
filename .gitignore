@@ -3,6 +3,7 @@ node_modules
 /build
 /.svelte-kit
 /package
+    path('detalles/<int:id>',my_view)
 .env
 .env.*
 !.env.example
