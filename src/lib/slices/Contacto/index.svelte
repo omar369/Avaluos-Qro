@@ -58,7 +58,7 @@
 			<PrismicRichText field={slice.primary.details} />
 		</div>
 		<div class="col-start-2 prose prose-slate prose-xl">
-			<WhatsBtn phoneNumber="524426396005" message="Hola, estoy interesado en sus servicios" />
+			<WhatsBtn phoneNumber="524426396005" message="Hola, estoy interesado en hacer un avalúo." />
 		</div>
 	</div>
 

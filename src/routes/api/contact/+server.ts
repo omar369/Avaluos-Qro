@@ -24,7 +24,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		const transporter = nodemailer.createTransport({
 			host: process.env.EMAIL_HOST, // Cambia según tu proveedor (Gmail, Outlook, etc.)
 			port: process.env.EMAIL_PORT, // Usa 465 para conexiones seguras SSL/TLS
-			secure: false, // True si usas SSL/TLS
+			secure: true, // True si usas SSL/TLS
 			auth: {
 				user: process.env.EMAIL_USER, // Tu correo
 				pass: process.env.EMAIL_PASS // Contraseña o token de aplicación
@@ -34,7 +34,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		// Configuración del correo
 		const mailOptions = {
 			from: `"${nombre}" <${correo}>`, // Nombre y correo del remitente
-			to: process.env.EMAIL_USER, // Correo de destino
+			to: 'omarins.222@gmail.com', // Correo de destino
 			subject: asunto, // Asunto del correo
 			text: mensaje, // Mensaje en texto plano
 			html: `<p><b>Nombre:</b> ${nombre}</p>
