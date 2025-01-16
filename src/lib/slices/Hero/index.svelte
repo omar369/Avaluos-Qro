@@ -77,7 +77,9 @@
 					class="prose prose-slate prose-xl text-slate-500 mx-auto mt-5 text-center items-center py-20 opacity-60"
 				>
 					<h3>
-						VAS A VENDER O RENTA TU CASA? NOSOTROS TE DECIMOS EN CUANTO Y COMO LO PUEDES HACER
+						¿VAS A VENDER O RENTA TU CASA?
+						<br />
+						NOSOTROS TE DECIMOS EN CUANTO Y COMO LO PUEDES HACER
 					</h3>
 					<h1>Cel. 442 639 60 05</h1>
 					<p class="text-3xl font-bold text-blue-900 underline">
@@ -105,12 +107,12 @@
 						/>
 					</svg>
 				</div>
-				<div class="-translate-y-[460px] pl-20">
+				<div class="-translate-y-[440px] pl-20">
 					<h1
 						id="avaluos"
 						class="ml-2 opacity-0 transform mb-5 md:mb-8 text-[clamp(5rem,16vmin,16rem)] font-bold leading-none tracking-tighter text-nowrap"
 					>
-						<span class="block text-blue-700">{slice.primary.title}</span>
+						<span class="block text-blue-700 -translate-y-10">{slice.primary.title}</span>
 					</h1>
 					<h3
 						id="inmob"
